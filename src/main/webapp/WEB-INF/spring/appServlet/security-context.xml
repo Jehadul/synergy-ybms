@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.0.xsd">
+
+
+	<security:http auto-config="true" use-expressions="true">
+		<security:headers>
+			<security:cache-control />
+			<security:hsts />
+		</security:headers>
+		<security:intercept-url pattern="/"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		
+		<security:intercept-url pattern="/index"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />		
+		
+		<!-- ybms start-->
+		<security:intercept-url pattern="/addGoodsTypeForm"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/saveGoodsType"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/editGoodsType"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/addFiscalYearForm" access="hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/saveFiscalYear" access="hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/editFiscalYear" access="hasRole('ROLE_SUPER_ADMIN')" />
+		
+		<security:intercept-url pattern="/addReportColumnTitleForm" access="hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/saveReportColumnTitle" access="hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/editReportColumnTitle" access="hasRole('ROLE_SUPER_ADMIN')" />
+		
+		<security:intercept-url pattern="/addDeliveryForm" access="hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/saveDelivery" access="hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/allDeliveryList" access="hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/adjustDeliveryList" access="hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/abDeliveryList" access="hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/wbDeliveryList" access="hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/editDelivery" access="hasRole('ROLE_SUPER_ADMIN')" />
+		
+		<security:intercept-url pattern="/addPointForm"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/savePoint"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/editPoint"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/addDeliveredForm"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/getDeliveredList"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/saveDeliveredList"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/addColorCodeForm"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/saveColorCode"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/editColorCode"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/addBudgetSourceForm"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/saveBudgetSource"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/editBudgetSource"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/addBudgetForm"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/saveBudget"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/budgetList"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/editBudget"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/addBudgetCodeForm"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/saveBudgetCode"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/editBudgetCode"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/addPointTypeForm"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/savePointType"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/editPointType"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/addTeamLeaderForm"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/saveTeamLeader"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/editTeamLeader"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/addStockReportForm"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/updateStockReport"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/addBillForm"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/saveBill"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/billList"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/editBill"
+			access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+			
+		<security:intercept-url pattern="/alAltmntReportForm" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/alAltmntReportFormRest" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/alAltmntTLReportForm" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/alAltmntTLReportFormRest" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/teamLeaderPointList" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/altmntSrcReportForm" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/altmntSrcReportFormRest" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/alAltmntPntReportForm" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/alAltmntPntReportFormRest" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/alAltmntSrcReportForm" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/alAltmntSrcReportFormRest" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/rstAltmntReportForm" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/rstAltmntTLReportForm" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/rstAltmntSrcReportForm" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/altmntTLReportForm" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/altmntTLReportFormRest" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/rstAltmntSrcSmryReportForm" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/altmntTLSmryReportForm" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/pointVSGoodDeliversForm" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/altmntColorReportForm" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/altmntClrAndTLReportForm" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/rstAltmntPointReportForm" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/rstAltmntPointReportFormRest" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/altmntColorReports" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/alAltmntVSGoodDeliversForm" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/generateReportsColorCodeWise" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/stockReportsForm" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		
+		<security:intercept-url pattern="/downLoadAll" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/downLoadAllRest" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/downLoadAllAltByPonit" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/downLoadAllAltByPonitRest" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/downLoadAllAltBySource" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/downLoadAllAltBySourceRest" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/downLoadAllAltByTeamLd" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/downLoadAllAltByTeamLdRest" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/downLoadAllAltByTeamLdAndPoint" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/downLoadAllAltByTeamLdAndPointRest" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/repoFormSeven" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/repoPointVSGoods" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/repoTeamLeaderPoits" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />
+		<security:intercept-url pattern="/stackReports" access="hasRole('ROLE_ADMIN') or hasRole('ROLE_SUPER_ADMIN')" />		
+		<security:intercept-url pattern="/deliveryHistory" access="hasRole('ROLE_SUPER_ADMIN')" />	
+		<!-- ybms end-->
+
+		<!-- login & logout permission for all -->
+		<security:form-login login-page="/login"
+			default-target-url="/index" login-processing-url="/j_spring_security_check"
+			username-parameter="j_username" password-parameter="j_password"
+			always-use-default-target="true" authentication-failure-url="/loginfailed" />
+		<security:logout logout-success-url="/logout"
+			logout-url="/j_spring_security_logout" />
+		<security:csrf disabled="true" />
+	</security:http>
+
+	<security:authentication-manager>
+		<security:authentication-provider>
+			<security:jdbc-user-service
+				data-source-ref="dataSource"
+				users-by-username-query="select username, password, status from user where username =? "
+				authorities-by-username-query="select us.username, ur.authority from user us, userrole ur 
+		      where us.id = ur.userid and us.username =? " />
+		</security:authentication-provider>
+	</security:authentication-manager>
+	
+	<!-- <bean id="springSecurityFilterChain" class="org.springframework.web.filter.DelegatingFilterProxy"/> -->
+
+</beans>

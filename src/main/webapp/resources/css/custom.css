@@ -1,0 +1,63 @@
+#loginForm {
+    border:solid 2px #b7ddf2;
+    background:#ebf4fb;
+    padding: 20px;
+    width: 320px;
+    margin: 0 auto;
+}
+
+#loginForm label {
+    font-weight: bold;
+    text-align: right;
+    width: 100px;
+    float: left;
+}
+
+#loginForm input {
+    font-size:12px;
+    padding:4px 2px;
+    border:solid 1px #aacfe4;
+    margin:2px 0 20px 10px;
+    float: left;
+}
+
+#loginForm input.text {
+    width:200px;
+}
+
+#loginForm button {
+    clear:both;
+    margin-left:150px;
+    width:125px;
+    height:31px;
+    background:#666666 url(img/button.png) no-repeat;
+    text-align:center;
+    line-height:31px;
+    color:#FFFFFF;
+    font-size:11px;
+    font-weight:bold;
+}
+
+#footer {
+    margin: 50px 0 5px;
+    padding: -1px 0;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #36a9e1;
+  	color: #fff;
+    border-color: #7F238F;
+    position:absolute;
+    bottom:-35px;
+    width:100%;
+   
+}
+
+.error {
+    color: #FF0000;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+.btn-success {}

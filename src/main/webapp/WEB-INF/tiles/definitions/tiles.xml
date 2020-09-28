@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<!-- Base Definition -->
+	<definition name="base-definition" template="/WEB-INF/tiles/template/template.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/tiles/template/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/tiles/template/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/template/footer.jsp" />
+	</definition>
+	
+	<definition name="base.definition2" template="/WEB-INF/views/login.jsp">
+		<put-attribute name="title" value="Yearly Budget Management System"></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+	</definition>
+	
+	<!-- Login Page -->
+	<definition name="login" extends="base.definition2">
+		<put-attribute name="title" value="YBMS Login Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp"></put-attribute>
+	</definition>
+
+	<!-- Home Page -->
+	<definition name="index" extends="base-definition">
+		<put-attribute name="title" value="Yearly Budget Management System Dashboard"/>
+		<put-attribute name="body" value="/WEB-INF/views/index.jsp" />
+	</definition>
+	
+	<definition name="addTeamLeaderForm" extends="base-definition">
+		<put-attribute name="title" value="New Team Leader Entry Form" />
+		<put-attribute name="body" value="/WEB-INF/views/addTeamLeaderForm.jsp" />
+	</definition>
+	
+	<definition name="addPointTypeForm" extends="base-definition">
+		<put-attribute name="title" value="New Point Type Entry Form" />
+		<put-attribute name="body" value="/WEB-INF/views/addPointTypeForm.jsp" />
+	</definition>
+	
+	<definition name="addBudgetSourceForm" extends="base-definition">
+		<put-attribute name="title" value="New Budget Source Entry Form" />
+		<put-attribute name="body" value="/WEB-INF/views/addBudgetSourceForm.jsp" />
+	</definition>
+	
+	<definition name="addBudgetCodeForm" extends="base-definition">
+		<put-attribute name="title" value="New Budget Code Entry Form" />
+		<put-attribute name="body" value="/WEB-INF/views/addBudgetCodeForm.jsp" />
+	</definition>
+	
+	<definition name="addGoodsTypeForm" extends="base-definition">
+		<put-attribute name="title" value="New Type of Goods Entry Form" />
+		<put-attribute name="body" value="/WEB-INF/views/addGoodsTypeForm.jsp" />
+	</definition>
+	
+	<definition name="addColorCodeForm" extends="base-definition">
+		<put-attribute name="title" value="New Color Code Entry Form" />
+		<put-attribute name="body" value="/WEB-INF/views/addColorCodeForm.jsp" />
+	</definition>
+	
+	<definition name="addFiscalYearForm" extends="base-definition">
+		<put-attribute name="title" value="New Fiscal Year Entry Form" />
+		<put-attribute name="body" value="/WEB-INF/views/addFiscalYearForm.jsp" />
+	</definition>
+	
+	<definition name="addReportColumnTitleForm" extends="base-definition">
+		<put-attribute name="title" value="New Report Column Title Entry Form" />
+		<put-attribute name="body" value="/WEB-INF/views/addReportColumnTitleForm.jsp" />
+	</definition>
+	
+	<definition name="addPointForm" extends="base-definition">
+		<put-attribute name="title" value="New Point Entry Form" />
+		<put-attribute name="body" value="/WEB-INF/views/addPointForm.jsp" />
+	</definition>
+	
+	
+	<definition name="addBudgetForm" extends="base-definition">
+		<put-attribute name="title" value="New Budget Entry"/>
+		<put-attribute name="body" value="/WEB-INF/views/addBudgetForm.jsp" />
+	</definition>
+	
+	<definition name="budgetList" extends="base-definition">
+		<put-attribute name="title" value="Budget List"/>
+		<put-attribute name="body" value="/WEB-INF/views/budgetList.jsp" />
+	</definition>
+	
+	<definition name="addBillForm" extends="base-definition">
+		<put-attribute name="title" value="New Bill Entry From"/>
+		<put-attribute name="body" value="/WEB-INF/views/addBillForm.jsp" />
+	</definition>
+	
+	<definition name="billList" extends="base-definition">
+		<put-attribute name="title" value="Bill List"/>
+		<put-attribute name="body" value="/WEB-INF/views/billList.jsp" />
+	</definition>
+	
+	<definition name="addDeliveryForm" extends="base-definition">
+		<put-attribute name="title" value="New Delivery Entry From"/>
+		<put-attribute name="body" value="/WEB-INF/views/addDeliveryForm.jsp" />
+	</definition>
+	
+	<definition name="allDeliveryList" extends="base-definition">
+		<put-attribute name="title" value="All Delivery List"/>
+		<put-attribute name="body" value="/WEB-INF/views/allDeliveryList.jsp" />
+	</definition>
+	
+	<definition name="adjustDeliveryList" extends="base-definition">
+		<put-attribute name="title" value="Adjust Delivery List"/>
+		<put-attribute name="body" value="/WEB-INF/views/adjustDeliveryList.jsp" />
+	</definition>
+	
+	<definition name="abDeliveryList" extends="base-definition">
+		<put-attribute name="title" value="Against Budget Delivery List"/>
+		<put-attribute name="body" value="/WEB-INF/views/abDeliveryList.jsp" />
+	</definition>
+	
+	<definition name="wbDeliveryList" extends="base-definition">
+		<put-attribute name="title" value="Without Budget Delivery List"/>
+		<put-attribute name="body" value="/WEB-INF/views/wbDeliveryList.jsp" />
+	</definition>
+	
+	
+	<definition name="alAltmntReportForm" extends="base-definition">
+		<put-attribute name="title" value="All Allotment Report"/>
+		<put-attribute name="body" value="/WEB-INF/views/alAltmntReportForm.jsp" />
+	</definition>
+	
+	<definition name="alAltmntTLReportForm" extends="base-definition">
+		<put-attribute name="title" value="All Allotment Team Leader Wise Report"/>
+		<put-attribute name="body" value="/WEB-INF/views/alAltmntTLReportForm.jsp" />
+	</definition>
+	
+	<definition name="altmntSrcReportForm" extends="base-definition">
+		<put-attribute name="title" value="Allotment Source Wise Report"/>
+		<put-attribute name="body" value="/WEB-INF/views/altmntSrcReportForm.jsp" />
+	</definition>
+	
+	<definition name="alAltmntPntReportForm" extends="base-definition">
+		<put-attribute name="title" value="All Allotment Point Wise Report"/>
+		<put-attribute name="body" value="/WEB-INF/views/alAltmntPntReportForm.jsp" />
+	</definition>
+	
+	<definition name="alAltmntSrcReportForm" extends="base-definition">
+		<put-attribute name="title" value="All Allotment Source Report"/>
+		<put-attribute name="body" value="/WEB-INF/views/alAltmntSrcReportForm.jsp" />
+	</definition>
+	
+	<definition name="rstAltmntReportForm" extends="base-definition">
+		<put-attribute name="title" value="Rest Of Allotment Report"/>
+		<put-attribute name="body" value="/WEB-INF/views/rstAltmntReportForm.jsp" />
+	</definition>
+	
+	<definition name="rstAltmntTLReportForm" extends="base-definition">
+		<put-attribute name="title" value="Rest Of Allotment Team Leader Wise Report"/>
+		<put-attribute name="body" value="/WEB-INF/views/rstAltmntTLReportForm.jsp" />
+	</definition>
+	
+	<definition name="rstAltmntSrcReportForm" extends="base-definition">
+		<put-attribute name="title" value="Rest of The Allotment Source Wise Report"/>
+		<put-attribute name="body" value="/WEB-INF/views/rstAltmntSrcReportForm.jsp" />
+	</definition>
+	
+	<definition name="altmntTLReportForm" extends="base-definition">
+		<put-attribute name="title" value="Allotment Team Leader Report"/>
+		<put-attribute name="body" value="/WEB-INF/views/altmntTLReportForm.jsp" />
+	</definition>
+	
+	<definition name="rstAltmntSrcSmryReportForm" extends="base-definition">
+		<put-attribute name="title" value="Rest of The Allotment Source Wise Summary Report"/>
+		<put-attribute name="body" value="/WEB-INF/views/rstAltmntSrcSmryReportForm.jsp" />
+	</definition>
+	
+	<definition name="altmntTLSmryReportForm" extends="base-definition">
+		<put-attribute name="title" value="Allotment Team Leader Wise Summary Report"/>
+		<put-attribute name="body" value="/WEB-INF/views/altmntTLSmryReportForm.jsp" />
+	</definition>
+	
+	<definition name="altmntColorReportForm" extends="base-definition">
+		<put-attribute name="title" value="Allotment Color Code Wise Report"/>
+		<put-attribute name="body" value="/WEB-INF/views/altmntColorReportForm.jsp" />
+	</definition>
+	
+	<definition name="altmntClrAndTLReportForm" extends="base-definition">
+		<put-attribute name="title" value="All Allotment Color Code &amp; Team Leader Wise Report"/>
+		<put-attribute name="body" value="/WEB-INF/views/altmntClrAndTLReportForm.jsp" />
+	</definition>
+	
+	<definition name="rstAltmntPointReportForm" extends="base-definition">
+		<put-attribute name="title" value="Rest of The Allotment Point Wise Report"/>
+		<put-attribute name="body" value="/WEB-INF/views/rstAltmntPointReportForm.jsp" />
+	</definition>
+	<definition name="teamLeaderPointList" extends="base-definition">
+		<put-attribute name="title" value="Team leader Point List Report"/>
+		<put-attribute name="body" value="/WEB-INF/views/teamLeaderPointList.jsp" />
+	</definition>
+	<definition name="altmntColorReports" extends="base-definition">
+		<put-attribute name="title" value="All Allowtment Color Code Reports"/>
+		<put-attribute name="body" value="/WEB-INF/views/altmntColorReports.jsp" />
+	</definition>
+	<definition name="altmntColorReportsForm" extends="base-definition">
+		<put-attribute name="title" value="All Allowtment Color Code Reports"/>
+		<put-attribute name="body" value="/WEB-INF/views/altmntColorReportsForm.jsp" />
+	</definition>
+	
+	<definition name="addDeliveredForm" extends="base-definition">
+		<put-attribute name="title" value="Delivery Entry From"/>
+		<put-attribute name="body" value="/WEB-INF/views/addDeliveredForm.jsp" />
+	</definition>
+	<definition name="alAltmntVSGoodDeliversForm" extends="base-definition">
+		<put-attribute name="title" value="Allowtment VS Good Delivery"/>
+		<put-attribute name="body" value="/WEB-INF/views/alAltmntVSGoodDeliversForm.jsp" />
+	</definition>
+	<definition name="alAltmntReportFormRest" extends="base-definition">
+		<put-attribute name="title" value="Rest Of The Allotment"/>
+		<put-attribute name="body" value="/WEB-INF/views/alAltmntReportFormRest.jsp" />
+	</definition>
+	<definition name="altmntTLReportFormRest" extends="base-definition">
+		<put-attribute name="title" value="Rest Of The Allotment Team Leader Wise"/>
+		<put-attribute name="body" value="/WEB-INF/views/altmntTLReportFormRest.jsp" />
+	</definition>
+	<definition name="altmntSrcReportFormRest" extends="base-definition">
+		<put-attribute name="title" value="Rest Of The Allotment Source Wise"/>
+		<put-attribute name="body" value="/WEB-INF/views/altmntSrcReportFormRest.jsp" />
+	</definition>
+	<definition name="rstAltmntPointReportFormRest" extends="base-definition">
+		<put-attribute name="title" value="Rest Of The Allotment Point Wise"/>
+		<put-attribute name="body" value="/WEB-INF/views/rstAltmntPointReportFormRest.jsp" />
+	</definition>
+	<definition name="pointVSGoodDeliversForm" extends="base-definition">
+		<put-attribute name="title" value="Point Vs Goods"/>
+		<put-attribute name="body" value="/WEB-INF/views/pointVSGoodDeliversForm.jsp" />
+	</definition>
+	
+	<definition name="addStockReportForm" extends="base-definition">
+		<put-attribute name="title" value="Stock Report Form"/>
+		<put-attribute name="body" value="/WEB-INF/views/addStockReportForm.jsp" />
+	</definition>
+	<definition name="stockReportsForm" extends="base-definition">
+		<put-attribute name="title" value="Stock Report Form"/>
+		<put-attribute name="body" value="/WEB-INF/views/stockReportsForm.jsp" />
+	</definition>
+	<definition name="altmntColorTeamLeaderWise" extends="base-definition">
+		<put-attribute name="title" value="Stock Report Form"/>
+		<put-attribute name="body" value="/WEB-INF/views/altmntColorTeamLeaderWise.jsp" />
+	</definition>
+	<definition name="dlvReportForm" extends="base-definition">
+		<put-attribute name="title" value="Delivery Report Form"/>
+		<put-attribute name="body" value="/WEB-INF/views/dlvReportForm.jsp" />
+	</definition>
+	<definition name="deliveryHistoryForm" extends="base-definition">
+		<put-attribute name="title" value="Delivery History Form"/>
+		<put-attribute name="body" value="/WEB-INF/views/deliveryHistoryForm.jsp" />
+	</definition>
+	
+</tiles-definitions>
